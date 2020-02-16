@@ -1,9 +1,114 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" padding>
+  <ion-refresher slot="fixed" style="margin-top: 50px" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list style="margin-top: 50px">
+    <ion-item>
+      <ion-label>Selecciona tu tema favorito</ion-label>
+      <ion-select value="todos" ok-text="Seleccionar" cancel-text="Cancelar">
+        <ion-select-option value="todos">Todos</ion-select-option>
+        <ion-select-option value="lunix">Tecnología</ion-select-option>
+        <ion-select-option value="mac7">Marketing</ion-select-option>
+        <ion-select-option value="mac8">Innovación</ion-select-option>
+        <ion-select-option value="win3.1">Windows 3.1</ion-select-option>
+        <ion-select-option value="win95">Windows 95</ion-select-option>
+        <ion-select-option value="win98">Windows 98</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="8">
+              Cursos recomendados
+            </ion-col>
+            <ion-col size="4">
+              <a>Ver todos</a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-slides>
+        <ion-slide style="padding-right: 20px">
+          <div class="slide">
+            <img src="https://miro.medium.com/max/12000/1*fXBo56b0tanSCNHo4O2eWw.jpeg" />
+            <h2>Curso de programación básica</h2>
+          </div>
+        </ion-slide>
+        <ion-slide style="padding-right: 20px">
+          <div class="slide">
+            <img src="https://www.america-retail.com/static//2018/05/marketing-blog.jpg" />
+            <h2>Curso de marketing</h2>
+          </div>
+        </ion-slide>
+        <ion-slide style="padding-right: 20px">
+          <div class="slide">
+            <img src="https://miro.medium.com/max/12000/1*fXBo56b0tanSCNHo4O2eWw.jpeg" />
+            <h2>Curso de programación básica</h2>
+          </div>
+        </ion-slide>
+        <ion-slide style="padding-right: 20px">
+          <div class="slide">
+            <img src="https://miro.medium.com/max/12000/1*fXBo56b0tanSCNHo4O2eWw.jpeg" />
+            <h2>Curso de programación básica</h2>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-card-content>
+  </ion-card>
+  <ion-item-divider>
+    <ion-label>
+      Resultados de tu filtro
+    </ion-label>
+  </ion-item-divider>
+  <ion-list>
+    <ion-list-header>
+      1567 resultados
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/youtube-512.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Curso de JavaScript</h2>
+        <h3>Código Facilito</h3>
+        <p>45 videos</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/youtube-512.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Curso de JavaScript</h2>
+        <h3>Código Facilito</h3>
+        <p>45 videos</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/youtube-512.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Curso de JavaScript</h2>
+        <h3>Código Facilito</h3>
+        <p>45 videos</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/youtube-512.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Curso de JavaScript</h2>
+        <h3>Código Facilito</h3>
+        <p>45 videos</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

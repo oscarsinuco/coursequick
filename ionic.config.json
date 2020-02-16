@@ -1,5 +1,7 @@
 {
   "name": "CourseQuick",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

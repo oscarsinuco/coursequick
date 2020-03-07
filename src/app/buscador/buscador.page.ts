@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-buscador',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscadorPage implements OnInit {
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
   }
-
+  dismiss() {
+    this.modalController.dismiss({
+      'dismissed': true
+    });
+  }
 }

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlGoogle: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50",
+  urlBackend: "https://us-central1-coursequick-54fe5.cloudfunctions.net",
+  apiKeyGoogle: "AIzaSyDfaOKoyjhPEEPM8X9KODBVukTR5iVCbD8"
 };
 
 /*

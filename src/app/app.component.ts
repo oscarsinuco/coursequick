@@ -26,9 +26,6 @@ export class AppComponent {
     return await modal.present();
   }
   initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    });
+    this.statusBar.backgroundColorByHexString('#29506D');
   }
 }

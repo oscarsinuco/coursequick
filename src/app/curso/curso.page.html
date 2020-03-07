@@ -1,0 +1,29 @@
+<ion-content #content>
+    <ion-card *ngIf="videos.length>0">
+        <iframe *ngIf="seleccionado.url" class="img" [src]="seleccionado.url | safe" style="height: 40vh;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <ion-card-content class="ion-no-padding">
+            <ion-list-header color="light">
+                <ion-label>{{seleccionado.snippet.title}}</ion-label>
+                <ion-button (click)="oculto = !oculto">
+                    <ion-icon name="chevron-down-outline" slot="end"></ion-icon>
+                </ion-button>
+            </ion-list-header>
+            <ion-list-header class="ion-padding" style="padding-top: 0px;" color="light" *ngIf="!oculto">
+                <ion-text>
+                    {{seleccionado.snippet.description}}
+                </ion-text>
+            </ion-list-header>
+            <ion-list>
+                <ion-item *ngFor="let video of videos" (click)="seleccionar(video)">
+                    <ion-avatar slot="end">
+                        <img src="{{video.snippet.thumbnails.default.url}}">
+                    </ion-avatar>
+                    <ion-label>
+                        <h3>{{video.snippet.title}}</h3>
+                        <p>{{video.snippet.description}}</p>
+                    </ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

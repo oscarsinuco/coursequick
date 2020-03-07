@@ -4,3 +4,17 @@ ion-toolbar {
 ion-content{
     --background: #F7FCFF;
 }
+.action-sheets-groups-page {
+  .EditionIcon {
+    --button-color: #29506D !important;
+  }
+}
+*{
+  font-size: .6rem;
+}
+ion-card-header{
+  padding: 5px;
+}
+ion-card{
+  margin: 0px;
+}

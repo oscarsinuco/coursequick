@@ -1,0 +1,16 @@
+.img{
+    width: 100%;
+}
+.video { position: relative; }
+
+.video a {
+   position: absolute;
+   display: block;
+   background: url(https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4f7.png) no-repeat center;
+    background-size: 20%;
+    
+   height: 100%;
+   width: 100%;
+   top: 0px;
+   left: 0px;
+}
